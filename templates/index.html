@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+<title>car price</title>
+<style>
+    body
+    {
+        background: linear-gradient(to top right, #272716 0%, #ffffff 100%);
+        background-attachment: fixed;
+        
+    }
+    
+    .container
+    {
+        width: 600px;
+        margin: 0 auto;
+        padding-top: 30px;
+        
+    }
+
+    .heading
+    {
+        width: 500px;
+        padding: 10px;
+        background-color: black;
+        color: blanchedalmond;
+    }
+    .fform
+    {
+        width: 300px;
+        padding: 15px;
+        background-attachment: fixed;
+        background-color: linen;
+        color: black;
+        
+        
+
+    }
+    .form-group
+    {
+        width: 350px;
+    }
+    button.btn 
+    {
+        background-color: black;
+        color: blanchedalmond;
+        
+    }
+    
+
+    
+</style>
+    </head>
+<body>
+    <div class="container">
+        <div class="head-form">
+        <div class="heading text-center">
+        <h3><b>Car Price Prediction</b></h3>
+        </div>
+        <form style="width: 500px;" class="fform" action="http://127.0.0.1:5000/predictions" method="POST">
+            <div class="form-group ml-5">
+                <b>Car Name </b>
+                <input class="form-control" name="car" type="text" placeholder="Enter car company">
+            </div>
+            <div class="form-group ml-5">
+                <b>Year</b>
+                <input class="form-control" name="year" type="number" placeholder="Enter the year">
+            </div>
+            <div class="form-group ml-5">
+                <b>Showroom Price</b>
+                <input class="form-control" name="price" type="number" placeholder="Enter car price in lakhs">
+            </div>
+            <div class="form-group ml-5">
+                <b>Kilometers Driven</b>
+                <input class="form-control" name="km" type="number" placeholder="Enter Kilometers Driven">
+            </div>
+            <div class="form-group ml-5">
+                <b>Previous Owners</b>
+                <input class="form-control" name="Owners" type="number" placeholder="Enter no. of Previous Owners">
+            </div>
+            <div class="form-group ml-5">
+                <b>Transmission:  </b>
+                <select class="form-select" name="transmission">
+                    <option selected>Automatic</option>
+                    <option value="1">Manual</option>
+                </select>
+            </div>
+            <div class="form-group ml-5">
+                <b>Fuel Type:   </b>
+                <select class="form-select" name="type">
+                    <option selected>Diesel</option>
+                    <option value="1">Petrol</option>
+                    <option value="1">CNG</option>
+                </select>
+            </div>
+            <div class="form-group ml-5">
+                <b>Seller Type:   </b>
+                <select class="form-select" name="Stype">
+                    <option selected>Dealer</option>
+                    <option value="1">Individual</option>
+                    
+                </select>
+            </div>
+            <div class= "form-group ml-5">
+                <button type="submit" name="Sprice" class="btn">Selling Price</button>
+            </div>
+            <div class= "form-group ml-5">
+                <b>Car Price should be: {{Predict}} lakhs </b>
+            </div>
+
+        </form>
+        </div>
+    </div>
+</body>
